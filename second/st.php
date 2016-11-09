@@ -156,11 +156,11 @@
       <div class="w-container">
         <ul class="w-list-unstyled dd-big-res">
           <li>
-            <div class="w-clearfix nav-res-link"><a href="index.html" class="res-txt animsition-link">Home</a>
+            <div class="w-clearfix nav-res-link"><a href="st.php" class="res-txt animsition-link">Home</a>
             </div>
           </li>
           <li>
-            <div class="w-clearfix nav-res-link"><a href="calender.html" class="res-txt animsition-link">Calender</a>
+            <div class="w-clearfix nav-res-link"><a href="#" class="res-txt animsition-link">Calender</a>
             </div>
           </li>
           <li>

@@ -93,7 +93,7 @@
       <!-- NAVIGATION -->
       <nav>
         <ul class="w-list-unstyled ul-nav">
-          <li data-ix="close-dropdown-on-hover"><a href="login.php" data-ix="show-dropdown-on-hover" class="w-inline-block nav-link animsition-link"><h3 class="biger">Home</h3></a>
+          <li data-ix="close-dropdown-on-hover"><a href="st.php" data-ix="show-dropdown-on-hover" class="w-inline-block nav-link animsition-link"><h3 class="biger">Home</h3></a>
           </li>
           <li data-ix="close-dropdown-on-hover"><a href="calender.html" data-ix="show-dropdown-on-hover" class="w-inline-block nav-link animsition-link"><h3 class="biger">Calender</h3></a>
           </li>
