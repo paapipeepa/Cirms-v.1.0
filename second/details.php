@@ -2,7 +2,7 @@
    if(empty($_SESSION['uname'])){
           echo "Session Expired";
           echo "Redirecting.....";
-          header('Refresh:0;url=../one/index.html');
+          header('Refresh:0;url=../index.html');
     }  
 ?>
 <!DOCTYPE html>
