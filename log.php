@@ -28,7 +28,7 @@
 				if($rows > 0){
 					echo "Login succesful";
 					$_SESSION['uname']=$mail;
-					header('Refresh:0 ;url=../second/login.php');
+					header('Refresh:0 ;url=/second/login.php');
 				}
 			}
 			else{
@@ -39,7 +39,7 @@
 				if($row > 0){
 					echo "Login succesful.";
 					$_SESSION['uname'] = $mail;
-					header('Refresh:0,url=../second/st.php');
+					header('Refresh:0,url=/second/st.php');
 				}
 				else{
 					echo "Login failed";
