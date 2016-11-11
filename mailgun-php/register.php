@@ -67,19 +67,43 @@ span.psw {
 <form action="verify.php" method="post">
   <div class="container">
     <label><b>Password From the mail</b></label>
-    <input type="text" placeholder="Enter it" name="uname" required>
+    <input type="text" placeholder="Enter it" name="oldpsw" required>
 
     <label><b>New Password</b></label>
-    <input type="text" placeholder="Enter Password" name="psw" required>
+    <input type="text" placeholder="Enter Password" name="newpsw" required>
 
     <label><b>Type it again</b></label>
-    <input type="text" placeholder="Confirm Password" name="pswo" required>
+    <input type="text" placeholder="Confirm Password" name="confpsw" required>
         
     <button type="submit">Submit</button>
     <input type="checkbox" checked="checked"> Remember me
   </div>
 
- 
+ <?php
+ if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $username="root";   
+    $password="asdf";
+    $server = "localhost";
+    $dbname= "praneeth";
+    $connect = new MySQLi($server,$username,$password,$dbname);
+            
+    if($connect->connect_errno){
+        echo "Connection failed";
+    }
+    $uname= $_POST['uname'];
+    $oldpsw = $_POST['oldpsw'];
+    $newpsw = $_POST['newpsw'];
+    $confpsw =$_POST['confpsw'];
+    $Str1 ="SELECT pass FROM `praneeth`.login where roll='$uname';";
+    $sql = $connect->query($Str1);
+    if($Str1==$oldpsw){
+        if($newpsw==$confpsw){
+            $str2="update `praneeth'.login set pass='$newpass';";
+        }
+    }
+
+
+?>
 </form>
 
 </body>
