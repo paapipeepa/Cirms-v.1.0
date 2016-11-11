@@ -20,10 +20,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 	$sql = $connect->query($str);
 	$rows = $sql->num_rows;
 				if($rows > 0){
-					echo "Already exists";
-					header('Refresh:2 ;url=../index.html');
-				}
-				elseif($rows ==0){
 					$Str1 ="SELECT * FROM `praneeth`.Stud_details where roll='$uname' and email='$rock';";
 					$sql = $connect->query($Str1);
 					$rows = $sql->num_rows;
@@ -38,14 +34,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 							    'subject' => 'Use this password for registration into CIRMS',
 							    'text'    =>  $unique
 							));
-							$Str2 = "INSERT INTO `praneeth`.login(`user`,`pass`) VALUES('$uname','$unique');";
+							$Str2 = "UPDATE `praneeth`.login set pass='$unique' where user='$uname';";
 							$sql = $connect->query($Str2);
 							header('Refresh:2 ;url=./register.php');
 						}
 					}
-					
-
 				}
+			
 }
 
 ?>

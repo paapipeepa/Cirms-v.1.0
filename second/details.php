@@ -127,7 +127,7 @@
             </ul>
           </li>
 
-          <li data-ix="close-dropdown-on-hover"><a href="index.html" data-ix="show-dropdown-on-hover" class="w-inline-block nav-link animsition-link"><h3 class="biger">logout</h3></a>
+          <li data-ix="close-dropdown-on-hover"><a href="logout.php" data-ix="show-dropdown-on-hover" class="w-inline-block nav-link animsition-link"><h3 class="biger">logout</h3></a>
           </li>
         </ul>
       </nav>
@@ -197,7 +197,7 @@
               </ul>
             </li>
             <li>
-              <div class="w-clearfix nav-res-link"><a href="index.html" class="res-txt animsition-link">logout</a>
+              <div class="w-clearfix nav-res-link"><a href="logout.php" class="res-txt animsition-link">logout</a>
               </div>
             </li>
           </ul>

@@ -67,7 +67,7 @@ span.psw {
 
 <h2>Change your Password</h2>
 
-<form action="verify.php" method="post">
+<form action="./mailgun-php/verify.php" method="post">
   <div class="container">
     <label><b>Password From the mail</b></label>
     <input type="text" placeholder="Enter it" name="oldpsw" required>
