@@ -251,6 +251,12 @@
                               echo '<p><strong>Branches Applicable: '.$row["branches"].'</strong></p>';
                             echo '</li>';
                             echo '<li>';
+                              echo '<p><strong>Minimum CGPA: '.$row["cgpa"].'</strong></p>';
+                            echo '</li>';
+                            echo '<li>';
+                              echo '<p><strong>Courses eligible: '.$row["cou"].'</strong></p>';
+                            echo '</li>';
+                            echo '<li>';
                               echo '<p><strong>Date of Interview: '.$row["date"].'</strong></p>';
                             echo '</li>';
                             echo '<li class="w-clearfix small-spc"><a href="register.php" target="_blank" class="w-button button">Upload Question Bank</a>';

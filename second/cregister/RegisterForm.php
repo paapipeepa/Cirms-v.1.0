@@ -8,8 +8,6 @@
 	<body>
 		<?php
 			$username = "root";
-			$password = "asdf";
-			$database = "praneeth";
 			$name  = $_POST["q15_name15"];
 			$rno   = $_POST["q19_rollNumber19"];
 			$email = $_POST["q30_email30"];
@@ -18,10 +16,12 @@
 			if ($connect->connect_error) {
     			die("Connection failed: " . $connect->connect_error);
 			} 
-			//@mysql_select_db($database) or die( "Unable to select database");
+			$id = $_GET['id'];
+			echo $id;
+			$str = "SELECT * FROM `praneeth`.Stud_details,`` where roll = '$rno' and "
 			$query = "INSERT INTO `praneeth`.Company_Registration(`Name`,`Rno`,`Email`,`Pno`) VALUES ('$name','$rno','$email','$pno')";
-			/*$query2 = "INSERT INTO `praneeth`.`Company_Registration` (`Name`, `Rno`, `Email`, `Pno`) VALUES ('asdf', 'asdf', 'asdf', '121')";
-			*/
+			header('Refresh:2 ;url=../index.html');
+
 			$bool = mysqli_query($connect,$query);
 			if($bool == TRUE){
 				echo "Successfully Registered";

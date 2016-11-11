@@ -827,13 +827,28 @@ li[data-type="control_image"] img {
           </span>
         </label>
         <div id="cid_13" class="form-input-wide jf-required">
-          <select class="form-dropdown validate[required]" style="width:150px" id="input_13" name="q13_eligibleBranches">
+          <select class="form-dropdown validate[required]" style="width:150px" id="input_13" name="q13_cgpa">
             <option value="5.0"> 5.0 </option>
             <option value="6.0"> 6.0 </option>
             <option value="7.0"> 7.0 </option>
             <option value="8.0"> 8.0 </option>
             <option value="9.0"> 9.0 </option>
             <option value="10.0"> None </option>
+          </select>
+        </div>
+      </li>
+       <li class="form-line form-line-column form-col-1 form-line-column-clear jf-required" data-type="control_dropdown" id="id_13">
+        <label class="form-label form-label-top" id="label_13" for="input_13" style="width:200px">
+          Select the eligible courses 
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_13" class="form-input-wide jf-required">
+          <select class="form-dropdown validate[required]" style="width:200px" id="input_13" name="q13_cou">
+            <option value="ug"> UG (B.Tech) </option>
+            <option value="pg"> PG (M.Tech) </option>
+            <option value="both"> Both </option>
           </select>
         </div>
       </li>

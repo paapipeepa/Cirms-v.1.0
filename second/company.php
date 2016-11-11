@@ -43,10 +43,12 @@
 			$date = $_POST['q20_date'];
 			$contact=$_POST['q14_contactInformation'];
 			$branches=$_POST['q13_eligibleBranches'];
+			$cgpa=$_POST['q13_cgpa'];
+			$cou=$_POST['q13_cou'];
 			$description=$_POST['q11_companyDescription'];
 			$additional=$_POST['q7_additionalDetails'];
 			
-			$sqlQuery = "INSERT INTO `praneeth`.Details (`name`, `category`, `email`, `url`,`date`,`contact`, `branches`, `description`, `additional`,`logo`) VALUES ('$name','$category','$email','$url','$date','$contact','$branches','$description','$additional','$image')";
+			$sqlQuery = "INSERT INTO `praneeth`.Details (`name`, `category`, `email`, `url`,`date`,`contact`, `branches`,`cgpa`,`cou`, `description`, `additional`,`logo`) VALUES ('$name','$category','$email','$url','$date','$contact','$branches','$cgpa','$cou','$description','$additional','$image')";
 			$bool = $connect->query($sqlQuery);	
 								
 			if ($bool === TRUE) {
