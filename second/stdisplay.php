@@ -127,7 +127,7 @@
             </ul>
           </li>
 
-          <li data-ix="close-dropdown-on-hover"><a href="index.html" data-ix="show-dropdown-on-hover" class="w-inline-block nav-link animsition-link"><h3 class="biger">logout</h3></a>
+          <li data-ix="close-dropdown-on-hover"><a href="../index.html" data-ix="show-dropdown-on-hover" class="w-inline-block nav-link animsition-link"><h3 class="biger">logout</h3></a>
           </li>
         </ul>
       </nav>

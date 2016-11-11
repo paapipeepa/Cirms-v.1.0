@@ -4,6 +4,7 @@
           echo "Redirecting.....";
           header('Refresh:0;url=../index.html');
     }  
+
 ?>
 <!DOCTYPE html>
 <html lang="en-US">

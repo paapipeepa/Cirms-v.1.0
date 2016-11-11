@@ -11,7 +11,7 @@ $mail->SMTPSecure = 'tls';                            // Enable encryption, only
 
 
 //$mail->From = 'YOU@YOUR_DOMAIN_NAME';
-$mail->From = 'Praneethtkonda@sandboxd149e0b9e4ce4363a8411227427f2ae5.mailgun.org';
+$mail->From = 'mailgun@sandboxd149e0b9e4ce4363a8411227427f2ae5.mailgun.org';
 $mail->FromName = 'Team Echo';
 $mail->addAddress('praneethtkonda@gmail.com');                 // Add a recipient
 echo $mail->addAddress;

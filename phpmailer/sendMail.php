@@ -8,19 +8,12 @@ $mail->SMTPAuth = true;                               // Enable SMTP authenticat
 $mail->Username = 'postmaster@sandboxd149e0b9e4ce4363a8411227427f2ae5.mailgun.org';   // SMTP username
 $mail->Password = '11c95f9b933f2b3ff6c122c3effeb308';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable encryption, only 'tls' is accepted
-if($mail->smtpConnect()){
-    $mail->smtpClose();
-   echo "Connected";
-}
-else{
-	echo "Not connected";
-}
+
 //$mail->From = 'YOU@YOUR_DOMAIN_NAME';
-$mail->From = 'sandboxd149e0b9e4ce4363a8411227427f2ae5.mailgun.org';
+$mail->From = 'mailgun@sandboxd149e0b9e4ce4363a8411227427f2ae5.mailgun.org';
 $mail->FromName = 'Team Echo';
 
-$mail->addAddress('yateeshkandru@gmail.com','Yateesh');                 // Add a recipient
-echo $mail->addAddress;
+$mail->addAddress('pratasaketh@gmail.com');                 // Add a recipient
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 
 $mail->Subject = 'This is a test mail from Team Echo';

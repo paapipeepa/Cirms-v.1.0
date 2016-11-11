@@ -169,6 +169,34 @@ Fax: 0476 - 2896178</p>
       </div>
       <!-- end of container -->
     </section>
+    <section id="contact">
+      <div class="container">
+        <div class="title center"><i class="icon-envelope"></i>
+          <h3>Report a Bug<span class="red-dot"></span></h3>
+          <hr>
+        </div>
+        <div class="section-content">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="contact-form">
+                <form id="contact-form" method="POST" action="email.php">
+                  <div class="form-group">
+                    <input name="fullname" type="text" placeholder="Your Rollno" data-required="true" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <textarea name="message" placeholder="Bug Description" data-required="true" class="form-control"></textarea>
+                  </div>
+                  <div class="form-group text-center">
+                    <button type="submit" class="btn btn-color">Send Message</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- end of row-->
+        </div>
+        <!-- end of section content-->
+      </div>
     <footer id="footer">
       <div class="container">
         <div class="footer-wrap b-0">
@@ -233,20 +261,20 @@ Fax: 0476 - 2896178</p>
 </div>
 <div id="id02" class="modal">
   
-  <form class="modal-content animate" >
+  <form class="modal-content animate" action="mailgun-php/mail.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
       <!--<img src="images/logo_dark.png" alt="CIRMS" class="avatar">-->
-      <p>Enter your AUMS credentials</p>
+      <p>Enter your Credentials</p>
     </div>
 
     <div class="count">
-      <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label><b>Rollno</b></label>
+      <input type="text" placeholder="Username" name="uname" required>
 
-      <!--<label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-      -->  
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email Address" name="ps" required>
+        
       <button type="submit">Register</button>
       <input type="checkbox" checked="checked"> Remember me
     </div>

@@ -819,6 +819,24 @@ li[data-type="control_image"] img {
           </select>
         </div>
       </li>
+      <li class="form-line form-line-column form-col-1 form-line-column-clear jf-required" data-type="control_dropdown" id="id_13">
+        <label class="form-label form-label-top" id="label_13" for="input_13">
+          Minimum CGPA required
+          <span class="form-required">
+            *
+          </span>
+        </label>
+        <div id="cid_13" class="form-input-wide jf-required">
+          <select class="form-dropdown validate[required]" style="width:150px" id="input_13" name="q13_eligibleBranches">
+            <option value="5.0"> 5.0 </option>
+            <option value="6.0"> 6.0 </option>
+            <option value="7.0"> 7.0 </option>
+            <option value="8.0"> 8.0 </option>
+            <option value="9.0"> 9.0 </option>
+            <option value="10.0"> None </option>
+          </select>
+        </div>
+      </li>
       <li class="form-line" data-type="control_textarea" id="id_11">
         <label class="form-label form-label-left form-label-auto" id="label_11" for="input_11"> Company Description </label>
         <div id="cid_11" class="form-input jf-required">
