@@ -259,7 +259,7 @@
                             echo '<li>';
                               echo '<p><strong>Date of Interview: '.$row["date"].'</strong></p>';
                             echo '</li>';
-                            echo ' <li class="w-clearfix small-spc"><a href="cregister/RegisterForm.php?id='.$row["id"].'" target="_blank" class="w-button button">Register</a>';
+                            echo ' <li class="w-clearfix small-spc"><a href="cregister/CompanyRegistrationForm.php?id='.$row["id"].'" class="w-button button">Register</a>';
                             echo '</li>';
               }     
             }
