@@ -98,7 +98,7 @@ span.psw {
     $sql = $connect->query($Str1);
     if($Str1==$oldpsw){
         if($newpsw==$confpsw){
-            $str2="update `praneeth'.login set pass='$newpass';";
+            $str2="update `praneeth'.login set pass='$newpsw';";
         }
     }
 
