@@ -94,9 +94,14 @@ span.psw {
     $oldpsw = $_POST['oldpsw'];
     $newpsw = $_POST['newpsw'];
     $confpsw =$_POST['confpsw'];
-    $Str1 ="SELECT pass FROM `praneeth`.login where roll='$uname';";
+    $Str1 ="SELECT * FROM `praneeth`.login where roll='$uname';";
     $sql = $connect->query($Str1);
-    if($Str1==$oldpsw){
+    if ($sql->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $a = $row["pass"];
+    }
+    if($a==$oldpsw){
         if($newpsw==$confpsw){
             $str2="update `praneeth'.login set pass='$newpsw';";
         }
