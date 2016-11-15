@@ -21,13 +21,20 @@
     			die("Connection failed: " . $connect->connect_error);
 			} 
 			$query = "INSERT INTO `praneeth`.Company_Registration(`Name`,`Rno`,`Email`,`Pno`,`id`) VALUES ('$name','$rno','$email','$pno','$id')";
-			$bool = mysqli_query($connect,$query);
-			if($bool == TRUE){
-				echo "Successfully Registered";
-				header('Refresh:2 ;url=../st.php');
+			$q = "SELECT Details.cgpa FROM `praneeth`.Stud_details, `praneeth`.Details WHERE roll = '$rno' AND Details.cgpa <=Stud_details.cgpa AND cur_course = cou";
+			$b = mysqli_query($connect,$q);
+			if($b == TRUE){
+				$bool = mysqli_query($connect,$query);
+				if($bool == TRUE){
+					echo "Successfully Registered";
+					header('Refresh:2 ;url=../st.php');
+				}
+				else{
+					echo "Fail";
+				}
 			}
 			else{
-				echo "Fail";
+				echo "You are not eligible. Please check the eligibility criteria and try again.";
 			}
 			mysql_close();
 		?>

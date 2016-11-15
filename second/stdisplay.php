@@ -174,7 +174,7 @@
                   <a href="ase.html" class="res-txt change-size animsition-link">Amrita School of Engineering</a>
                   </div>
                 </li>
-                <li>
+                <!--<li>
                   <div class="w-clearfix nav-res-link">
                    <a href="asas.html" class="res-txt change-size animsition-link">Amrita School of Arts &amp; science</a>
                   </div>
@@ -193,7 +193,7 @@
                   <div class="w-clearfix nav-res-link">
                    <a href="asay.html" class="res-txt change-size animsition-link">Amrita School of ayurveda</a>
                   </div>
-                </li>
+                </li>-->
               </ul>
             </li>
             <li>
@@ -259,7 +259,7 @@
                             echo '<li>';
                               echo '<p><strong>Date of Interview: '.$row["date"].'</strong></p>';
                             echo '</li>';
-                            echo ' <li class="w-clearfix small-spc"><a href="cregister/CompanyRegistrationForm.php?id='.$row["id"].'" class="w-button button">Register</a>';
+                            echo ' <li class="w-clearfix small-spc"><a href="cregister/CompanyRegistrationForm.php?id='.$row["id"].'" class="w-button button">Register</a>&nbsp<a href="StuList.php?id='.$row["id"].'" class="w-button button">View List</a>';
                             echo '</li>';
               }     
             }

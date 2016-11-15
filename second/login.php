@@ -105,7 +105,7 @@
                 <a href="#" class="w-inline-block nav-link nav-dd animsition-link">
                   <div>Amrita School of Engineering</div>
                 </a>
-              </li>
+              </li><!--
               <li>
                 <a href="#" class="w-inline-block nav-link nav-dd animsition-link">
                   <div>Amrita School of Arts &amp; science</div>
@@ -125,10 +125,9 @@
                 <a href="#" class="w-inline-block nav-link nav-dd animsition-link">
                   <div>Amrita School of ayurveda</div>
                 </a>
-              </li>
+              </li>-->
             </ul>
           </li>
-
           <li data-ix="close-dropdown-on-hover"><a href="logout.php" data-ix="show-dropdown-on-hover" class="w-inline-block nav-link animsition-link"><h3 class="biger">logout</h3></a>
           </li>
         </ul>
