@@ -45,7 +45,7 @@
 					echo "Login failed";
 					echo "<br>";
 					echo "You are being redirecting to main page....";
-					header('Refresh:3 ;url=index.html');
+					header('Refresh:3 ;url=index.php');
 				}
 				
 			}

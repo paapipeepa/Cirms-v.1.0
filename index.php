@@ -1,3 +1,11 @@
+<?php session_start();
+if($_SESSION['uname']=='cirms_admin'){
+header('Refresh:0;url=./second/login.php');
+}
+elseif(!empty($_SESSION['uname'])){
+  header('Refresh:0;url=./second/st.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +54,7 @@
     <header id="topnav">
       <div class="container">
         <div class="logo">
-          <a href="index.html">
+          <a href="index.php">
             <img src="images/2.png" alt="" class="logo-light">
             <img src="images/2.png" alt="" class="logo-dark">
           </a>

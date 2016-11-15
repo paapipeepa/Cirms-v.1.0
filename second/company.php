@@ -53,7 +53,7 @@
 								
 			if ($bool === TRUE) {
     			echo "New Company data added to the database";
-    			echo "You will redirecting in 3 seconds.....";
+    			echo "You will be redirected in 3 seconds.....";
     			//header("content-type": image/jpeg);
     			//echo $file_tmp;
     			header('Refresh:3 ;url=/templates/log/login.php');

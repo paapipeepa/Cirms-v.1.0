@@ -2,7 +2,7 @@
    if(empty($_SESSION['uname'])){
           echo "Session Expired";
           echo "Redirecting.....";
-          header('Refresh:0;url=../index.html');
+          header('Refresh:0;url=../index.php');
     }  
 
 ?>
@@ -140,7 +140,7 @@
   <div class="w-hidden-main">
     <div class="responsive-menu">
       <div class="w-container">
-        <a href="index.html" class="w-inline-block brand-logo more-margin animsition-link"><img width="135" src="images/logo.png" alt="logo">
+        <a href="index.php" class="w-inline-block brand-logo more-margin animsition-link"><img width="135" src="images/logo.png" alt="logo">
         </a>
         <div data-ix="open-responsive-menu" class="hamburger">
           <div class="w-embed">
@@ -155,7 +155,7 @@
       <div class="w-container">
         <ul class="w-list-unstyled dd-big-res">
           <li>
-            <div class="w-clearfix nav-res-link"><a href="index.html" class="res-txt animsition-link">Home</a>
+            <div class="w-clearfix nav-res-link"><a href="index.php" class="res-txt animsition-link">Home</a>
             </div>
           </li>
           <li>
@@ -197,7 +197,7 @@
             </ul>
           </li>
           <li>
-            <div class="w-clearfix nav-res-link"><a href="index.html" class="res-txt animsition-link">logout</a>
+            <div class="w-clearfix nav-res-link"><a href="index.php" class="res-txt animsition-link">logout</a>
             </div>
           </li>
         </ul>
