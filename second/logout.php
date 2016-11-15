@@ -6,7 +6,7 @@
 		session_unset();
 		session_destroy();
 		echo "Log out successful";
-		header('Refresh:0;url=../index.html');
+		header('Refresh:0;url=../index.php');
 	?>
 </body>
 </html>
