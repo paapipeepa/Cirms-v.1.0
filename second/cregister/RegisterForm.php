@@ -30,7 +30,8 @@
 					header('Refresh:2 ;url=../st.php');
 				}
 				else{
-					echo "Fail";
+					echo "You are already registered";
+					header('Refresh:2;url=../st.php');
 				}
 			}
 			else{

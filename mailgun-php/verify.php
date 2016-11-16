@@ -31,8 +31,8 @@
             if($newpsw==$confpsw){
                 $str2="update `praneeth`.login set pass='$newpsw' where user='$uname';";
                 $sql = $connect->query($str2);
-                echo "successful";
-                header('Refresh:0 ;url=../index.html');
+                echo "Successfully Changed your Password, please Login again";
+                header('Refresh:4 ;url=../index.php');
             }
         }
         else{
