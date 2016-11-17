@@ -19,6 +19,16 @@
 			if($connect->connect_errno){
 				echo "Connection failed";
 			}
+			
+			if(isset($_SESSION['uname'])){
+			  if($_SESSION['uname'] == 'cirms_admin'){
+			  header('Refresh:0;url=./second/login.php');
+			  }
+			  else{
+			    header('Refresh:0;url=./second/st.php');
+			  } 
+			}
+			else{
 			$mail=$_POST['uname'];
 			$pwd=$_POST['psw'];		
 			if($mail == $uname){					
@@ -49,7 +59,7 @@
 				}
 				
 			}
-			
+			}
 		}
 	?>
 </body>
