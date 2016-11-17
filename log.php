@@ -18,6 +18,7 @@
 			
 			if($connect->connect_errno){
 				echo "Connection failed";
+				echo "<br>";
 			}
 			$mail=$_POST['uname'];
 			$pwd=$_POST['psw'];		
@@ -44,7 +45,7 @@
 				else{
 					echo "Login failed";
 					echo "<br>";
-					echo "You are being redirecting to main page....";
+					echo "You are being redirecting to main page";
 					header('Refresh:3 ;url=index.php');
 				}
 				
