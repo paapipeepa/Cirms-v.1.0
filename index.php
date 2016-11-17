@@ -269,7 +269,7 @@ Fax: 0476 - 2896178</p>
 
     <div class="count" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw"> <a href="mailgun-php/forgot.php">Forgot password</a></span>
+      <span class="psw"> <a href="mailgun-php/f1.php">Forgot password</a></span>
     </div>
   </form>
 </div>
