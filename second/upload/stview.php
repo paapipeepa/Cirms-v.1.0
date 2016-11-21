@@ -44,7 +44,7 @@
 		}
 	mysqli_close();
 ?>
-	<a href="../login.php"><button class="button button1">Go Back</button> </a>
+	<a href="../st.php"><button class="button button1">Go Back</button> </a>
 </body>
 <style>
 .button {

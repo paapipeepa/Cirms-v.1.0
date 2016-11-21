@@ -215,6 +215,7 @@
                 die("Connection failed: " . $con->connect_error);
             }
             $id = $_GET['id'];
+            $_SESSION['in'] = $id;
             $query = "select * from `praneeth`.Details WHERE id = $id;";
             $result = $con->query($query);
             $count = $result->num_rows;
@@ -258,7 +259,7 @@
                             echo '<li>';
                               echo '<p><strong>Date of Interview: '.$row["date"].'</strong></p>';
                             echo '</li>';
-                            echo '<li class="w-clearfix small-spc"><a href="register.php" target="_blank" class="w-button button">Upload Question Bank</a>&nbsp<a href="List.php?id='.$row["id"].'" class="w-button button">View List</a>';
+                            echo '<li class="w-clearfix small-spc"><a href="upload/upload.php" class="w-button button">Upload Question Bank</a>&nbsp&nbsp<a href="List.php?id='.$row["id"].'" class="w-button button">View List</a>&nbsp&nbsp<a href="upload/view.php" class="w-button button">View Question Bank</a>';
                             echo '</li>';
               }     
             }

@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(isset($_SESSION['uname'])){
+  if($_SESSION['uname'] != 'cirms_admin')
+  {
+    header('Refresh:0;url=../st.php');
+  } 
+}
+else header('Refresh:0;url=../../index.php');
+?>
 <DOCtype! html>
 <html>
 	<body style="background-color:#C8C8C8;">
@@ -13,21 +23,15 @@
 					</td>
 				</tr>
 			</table>
-			<select>
-				<option>meow1</option>
-				<option>meow2</option>
-				<option>meow3</option>
-				<option>meow4</option>
-				<option>meow5</option>
-			</select>
 		</form>
+		<a href="../login.php"><button class="button button1">Go Back</button> </a>
 <?php
 	$username="root";   
     $password="asdf";
     $server = "localhost";
     $dbname= "praneeth";
     $connect = new MySQLi($server,$username,$password,$dbname);
-            
+    $value = $_SESSION['in'];
     if($connect->connect_errno){
         echo "Connection failed";
     }
@@ -48,18 +52,36 @@
 				{
 				    $fileName = addslashes($fileName);
 				}
-			//include 'library/config.php';
-			//include 'library/opendb.php';
-
-			$query = "INSERT INTO `praneeth`.upload (name, size, type, content ) VALUES ('$fileName', '$fileSize', '$fileType', '$content')";
-
+		
+			$query = "INSERT INTO `praneeth`.upload (name, size, type, content,companyid) VALUES ('$fileName', '$fileSize', '$fileType', '$content','$value')";
 			mysqli_query($connect,$query) or die('Error, query failed'); 
-
-			//include 'library/closedb.php';
-
 			echo "<br>File $fileName uploaded<br>";
 		} 
 	mysqli_close();
 ?>
 	</body>
+	<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
 </html>
