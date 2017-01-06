@@ -192,7 +192,7 @@ Fax: 0476 - 2896178</p>
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <div class="contact-form">
-                <form id="contact-form" method="POST" action="email.php">
+                <form id="contact-form" method="POST" action="report.php">
                   <div class="form-group">
                     <input name="fullname" type="text" placeholder="Your Rollno" data-required="true" class="form-control">
                   </div>
@@ -200,7 +200,7 @@ Fax: 0476 - 2896178</p>
                     <textarea name="message" placeholder="Bug Description" data-required="true" class="form-control"></textarea>
                   </div>
                   <div class="form-group text-center">
-                    <button type="submit" class="btn btn-color">Send Message</button>
+                    <input type="submit" class="btn btn-color">
                   </div>
                 </form>
               </div>

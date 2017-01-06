@@ -210,26 +210,7 @@
   <!-- COMPANYS -->
   <div id="filter" class="w-section section-imp">
   <h1> <?php echo $_SESSION['uname'];?>, Welcome to CIRMS</h1>
-    <div class="w-container">
-      <div class="w-clearfix filter-cont">
-        <div data-ix="open-filter-menu" class="w-clearfix show-filter">
-          <div class="filter-button">
-            <div class="w-embed"><i class="fa fa-filter"></i>
-            </div>
-          </div>
-          <div class="w-clearfix filter-effect">
-            <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
-            <div class="filter-txt-hide">Show Filter</div>
-          </div>
-
-        </div>
-        <div data-ix="move-filter-content-on-load" class="w-clearfix filters">
-        <a href="#" data-filter="*" class="button">All</a>
-        <a href="#" data-filter=".brand" class="button">EEE</a>
-        <a href="#" data-filter=".art" class="button">ECE</a>
-        <a href="#" data-filter=".photo" class="button">CSE</a>
-        <a href="#" data-filter=".print" class="button">MEC</a>
-        </div>
+    
         <style>
           .button3 {
             background-color: #008cba;

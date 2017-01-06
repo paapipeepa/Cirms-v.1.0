@@ -260,7 +260,7 @@
                             echo '<li>';
                               echo '<p><strong>Date of Interview: '.$row["date"].'</strong></p>';
                             echo '</li>';
-                            echo ' <li class="w-clearfix small-spc"><a href="cregister/CompanyRegistrationForm.php?id='.$row["id"].'" class="w-button button">Register</a>&nbsp<a href="StuList.php?id='.$row["id"].'" class="w-button button">View List</a>&nbsp<a href="upload/stview.php" class="w-button button">View Question Bank</a>';
+                            echo ' <li class="w-clearfix small-spc"><a href="check.php?id='.$row["id"].'" class="w-button button">Register</a>&nbsp<a href="StuList.php?id='.$row["id"].'" class="w-button button">View List</a>&nbsp<a href="upload/stview.php" class="w-button button">View Question Bank</a>';
                             echo '</li>';
               }     
             }

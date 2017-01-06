@@ -218,20 +218,17 @@
             </div>
           </div>
           <div class="w-clearfix filter-effect">
-            <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div>
+            <div data-ix="hide-filter-opacity-0" class="filter-txt">Hide Filter</div> 
             <div class="filter-txt-hide">Show Filter</div>
           </div>
 
         </div>
         <div data-ix="move-filter-content-on-load" class="w-clearfix filters">
-        <a href="#" data-filter="*" class="button">All</a>
-        <a href="#" data-filter=".brand" class="button">EEE</a>
-        <a href="#" data-filter=".art" class="button">ECE</a>
-        <a href="#" data-filter=".photo" class="button">CSE</a>
-        <a href="#" data-filter=".print" class="button">MEC</a>
-        </div>
+        <a href="filter/" data-filter="*" class="button">Go to filter page</a>
+        </div>  
        <a href="j.php"> <button class="button button3">Add a company</button> </a>
        <a href="Editupload.php"> <button class="button button4">Upload File</button> </a>
+     <!--  <a href="filter.php"><button class="button button3">Go to filter page</button></a> -->
         <style>
           .button3 {
             background-color: #008cba;
@@ -259,15 +256,15 @@
         <div class="grid-sizer"></div>
         <!--<div class="item brand photo">
           <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp"> -->
-          <?php
-            $username="root"; 
-            $password="asdf";
-            $server = "localhost";
-            $dbname= "praneeth";
-            $con = new mysqli($server,$username,$password,$dbname);
-            if ($con->connect_error) {
-                die("Connection failed: " . $con->connect_error);
-            }
+            <?php
+              $username="root"; 
+              $password="asdf";
+              $server = "localhost";
+              $dbname= "praneeth";
+              $con = new mysqli($server,$username,$password,$dbname);
+              if ($con->connect_error) {
+                  die("Connection failed: " . $con->connect_error);
+              }
             $query = "select * from `praneeth`.Details";
             $result = $con->query($query);
             while ($row = $result->fetch_assoc()) {
