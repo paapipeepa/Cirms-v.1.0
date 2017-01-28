@@ -206,10 +206,8 @@
 
     <!-- END RESPONSIVE NAVIGATION -->
         <?php
-            $username="root"; 
-            $password="asdf";
-            $server = "localhost";
-            $dbname= "praneeth";
+            include 'db_open.php';
+
             $con = new mysqli($server,$username,$password,$dbname);
             if ($con->connect_error) {
                 die("Connection failed: " . $con->connect_error);
@@ -260,10 +258,16 @@
                               echo '<p><strong>Date of Interview: '.$row["date"].'</strong></p>';
                             echo '</li>';
                             echo '<li class="w-clearfix small-spc"><a href="upload/upload.php" class="w-button button">Upload Question Bank</a>&nbsp&nbsp<a href="List.php?id='.$row["id"].'" class="w-button button">View List</a>&nbsp&nbsp<a href="upload/view.php" class="w-button button">View Question Bank</a>';
+                            echo "\n";
+                            echo '<form method="post" action= "dot.php">';
+                            echo '<input type="text" name="date"></input>';
+                            echo '<input class="w-button button" type="submit">';
+                            echo '</form>'; 
                             echo '</li>';
               }     
             }
-            
+            include 'db_close.php';
+
         ?>
               
               
@@ -351,4 +355,6 @@
   </script>
 
 </body>
+
+
 </html>

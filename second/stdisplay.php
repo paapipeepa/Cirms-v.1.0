@@ -5,6 +5,7 @@
           header('Refresh:0;url=../index.php');
     }  
 ?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -207,10 +208,7 @@
 
     <!-- END RESPONSIVE NAVIGATION -->
         <?php
-            $username="root"; 
-            $password="asdf";
-            $server = "localhost";
-            $dbname= "praneeth";
+            include 'db_open.php';
             $con = new mysqli($server,$username,$password,$dbname);
             if ($con->connect_error) {
                 die("Connection failed: " . $con->connect_error);
@@ -260,11 +258,13 @@
                             echo '<li>';
                               echo '<p><strong>Date of Interview: '.$row["date"].'</strong></p>';
                             echo '</li>';
-                            echo ' <li class="w-clearfix small-spc"><a href="check.php?id='.$row["id"].'" class="w-button button">Register</a>&nbsp<a href="StuList.php?id='.$row["id"].'" class="w-button button">View List</a>&nbsp<a href="upload/stview.php" class="w-button button">View Question Bank</a>';
+                            echo ' <li class="w-clearfix small-spc"><a href="check.php?id='.$row["id"].'" class="w-button button">Register</a>&nbsp<a href="StuList.php?id='.$row["id"].'" class="w-button button">View List</a>&nbsp<a href="upload/stview.php" class="w-button button">View Question Bank</a>&nbsp<a href="bus.php"><button class="w-button button">Bus Register</button></a>';
+                            
                             echo '</li>';
               }     
             }
-            
+            include 'db_close.php';
+
         ?>
               </ul>
           </div>
@@ -338,6 +338,11 @@
 
   <!-- THEME CUSTOM -->
   <script type="text/javascript" src="js/scripts.js"></script>
+    <script>
+function myFunction() {
+    alert("I am an alert box!");
+}
+</script>
 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

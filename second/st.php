@@ -51,10 +51,12 @@
   <div class="top-border">
     <div class="w-row">
       <div class="w-col w-col-6 w-clearfix">
-        <a href="st.php" class="w-inline-block brand-logo animsition-link"><img width="135" src="images/logo.png" alt="logo"</a>
+        <a href="st.php" class="w-inline-block brand-logo animsition-link"><img width="135" src="images/logo.png" alt="logo"></a>
       </div>
       <div class="w-col w-col-6">
         <div class="social-wrapper">
+        <?php echo '<a href="#" style ="text-decoration:none ;font-size:17px">'.$_SESSION['uname'].'</a>';?> &nbsp&nbsp
+         <a style="text-decoration: none;";><a onclick="document.getElementById('id02').style.display='block'""  style="font-size: 16px; cursor: pointer; text-decoration: none;">Update details</button></a> </a> &nbsp&nbsp&nbsp
           <a href="#" class="w-inline-block social-icon facebook">
             <i class="fa fa-facebook" aria-hidden="true"></i>
           </a>
@@ -206,11 +208,36 @@
     </nav>
   </div>
   <!-- END RESPONSIVE NAVIGATION -->
+  <div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="hostel.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <!--<img src="images/logo_dark.png" alt="CIRMS" class="avatar">-->
+      <p>Enter your Credentials</p>
+    </div>
 
+    <div class="count">
+      <label><b>Hostel Name</b></label>
+      <input type="text" placeholder="Hostel Name" name="hname" required>
+
+      <label><b>Room number</b></label>
+      <input type="text" placeholder="Enter Room number" name="rno" required>
+        
+      <button type="submit">Update</button>
+      
+    </div>
+
+    </form>
+</div>
   <!-- COMPANYS -->
   <div id="filter" class="w-section section-imp">
-  <h1> <?php echo $_SESSION['uname'];?>, Welcome to CIRMS</h1>
-    
+  <center><h1>Welcome to CIRMS</h1></center>
+ <!-- <a style="text-decoration: none;";><a onclick="document.getElementById('id02').style.display='block'""  style="font-size: 16px; cursor: pointer; text-decoration: none;">Update details</button></a> </a>
+  <a target="_blank"> <button class="button button3" onclick="document.getElementById('id01')">Update Details
+  </button> </a> -->
+ <!-- <a target="_blank">
+                <button onclick="document.getElementById('id02').style.display='block'" class="button3" style="font-size: 16px; cursor: pointer;margin: 0px 20px; padding :10px 10px 10px 10px; background-color: #008cba; ">Update details</button></a>  -->
         <style>
           .button3 {
             background-color: #008cba;
@@ -239,16 +266,10 @@
         <!--<div class="item brand photo">
           <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp"> -->
           <?php
-            $username="root"; 
-            $password="asdf";
-            $server = "localhost";
-            $dbname= "praneeth";
-            $con = new mysqli($server,$username,$password,$dbname);
-            if ($con->connect_error) {
-                die("Connection failed: " . $con->connect_error);
-            }
+           include 'db_open.php';
             $query = "select * from `praneeth`.Details";
-            $result = $con->query($query);
+            $result = $connect->query($query);
+            
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="item brand photo">';
                   echo '<div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">';
@@ -276,6 +297,7 @@
         <a href= '../../../files/Editupload.php'><img src='images/download.png'></a>
     </div>
      CALENDER -->
+
     <div class="w-section section-imp dark-gray more-padding">
     <div class="w-container">
       <div class="title-wrapper">
@@ -347,6 +369,7 @@
         </div>
       </div>
     </div>
+
   </footer>
   <!-- END FOOTER -->
 
@@ -391,4 +414,119 @@
   </script>
 
 </body>
+<style>
+   input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #191b1d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #191b1d;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.count {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+     </style>
 </html>

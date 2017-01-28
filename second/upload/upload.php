@@ -26,15 +26,8 @@ else header('Refresh:0;url=../../index.php');
 		</form>
 		<a href="../login.php"><button class="button button1">Go Back</button> </a>
 <?php
-	$username="root";   
-    $password="asdf";
-    $server = "localhost";
-    $dbname= "praneeth";
-    $connect = new MySQLi($server,$username,$password,$dbname);
-    $value = $_SESSION['in'];
-    if($connect->connect_errno){
-        echo "Connection failed";
-    }
+	$value = $_SESSION['in'];
+    include 'db_open.php';
 
 	if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
 		{
@@ -57,7 +50,7 @@ else header('Refresh:0;url=../../index.php');
 			mysqli_query($connect,$query) or die('Error, query failed'); 
 			echo "<br>File $fileName uploaded<br>";
 		} 
-	mysqli_close();
+	include 'db_close.php';
 ?>
 	</body>
 	<style>

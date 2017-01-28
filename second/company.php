@@ -8,14 +8,7 @@
 <body>
 	<?php
 		if($_SERVER['REQUEST_METHOD'] == "POST"){
-			$username="root";	
-			$password="asdf";
-			$server = "localhost";
-			$dbname= "praneeth";
-			$connect = new mysqli($server,$username,$password,$dbname);
-			if ($connect->connect_error) {
-    			die("Connection failed: " . $connect->connect_error);
-			} 
+			include 'db_open.php'; 
 			if(isset($_FILES['file'])){
 			      $errors= array();
 			      $file_name = $_FILES['file']['name'];
@@ -66,6 +59,8 @@
 			}
 				
 		}
+		include 'db_close.php';
+
 	?>
 </body>
 </html>

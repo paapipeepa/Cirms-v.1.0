@@ -1,20 +1,27 @@
 <?php
-	$username="root";	
-	$password="asdf";
-	$server = "localhost";
-	$dbname= "praneeth";
-	$con = new mysqli($server,$username,$password,$dbname);
-	if ($con->connect_error) {
-    			die("Connection failed: " . $con->connect_error);
+	include '../db_main.php';
+	$connect = new mysqli($server,$username,$password,$dbname);
+	if ($connect->connect_error) {
+    			die("Connection failed: ");
 	}
 	$id = $_GET['id'];
 	$query = "select * from `praneeth`.Details WHERE id = $id;";
-	$result = $con->query($query);
+	$result = $connect->query($query);
+	$q = "select * from `praneeth`.img";
+	$ko = $connect->query($q);
 	$count = $result->num_rows;
 	if( $count > 0 ){
     		while($row = $result->fetch_assoc()){
     			header("Content-type: image/jpeg");
-    			echo $row['logo'];
+    			if(empty($row['logo'])){
+    				while($r = $ko->fetch_assoc()){
+    					echo $r['logo'];
+    				}
+    			}
+    			else{
+    				echo $row['logo'];
+    			}
     		} 		
 	}
+
 ?>

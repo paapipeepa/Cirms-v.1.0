@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^Home?$ login.php
+
+RewriteRule ^details/([0-9]+) details.php?id=$1

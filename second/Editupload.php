@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "asdf", "praneeth");
+include 'db_open.php';
 require_once 'Classes/PHPExcel/IOFactory.php';
 require_once 'Classes/PHPExcel.php';
    if(isset($_FILES['image'])){
@@ -88,6 +88,7 @@ require_once 'Classes/PHPExcel.php';
          print_r($errors);
       }
    }
+   include 'db_close.php';
 ?>
 <html>
    <body class="hell">

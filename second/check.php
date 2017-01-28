@@ -13,15 +13,7 @@
 	<body>
 		<?php
 			$id = $_GET['id'];
-			$username = "root";
-			$password="asdf";
-            $server = "localhost";
-            $dbname= "praneeth";
-            $u=$_SESSION["uname"];
-            $connect=mysqli_connect($sever,$username,$password,$database);
-			if ($connect->connect_error) {
-    			die("Connection failed: " . $connect->connect_error);
-			} 
+			include 'db_open.php';
             $query = "select * from `praneeth`.Stud_details WHERE roll = '$u'";
             $query2 = "select * from `praneeth`.Details where id='$id'";
             $bool=mysqli_query($connect,$query);
@@ -58,5 +50,8 @@
 				header('Refresh:2 ;url=st.php');
 				
 			}
+			include 'db_close.php';
+		?>
+
            
 

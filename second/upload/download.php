@@ -2,15 +2,7 @@
 if(isset($_GET['id'])) 
 {
 
-	$username="root";   
-    $password="asdf";
-    $server = "localhost";
-    $dbname= "praneeth";
-    $connect = new MySQLi($server,$username,$password,$dbname);
-            
-    if($connect->connect_errno){
-        echo "Connection failed";
-    }
+	include 'db_open.php';
 
 $id    = $_GET['id'];
 $query = "SELECT name, type, size, content FROM `praneeth`.upload WHERE id = '$id'";
@@ -22,8 +14,7 @@ header("Content-length: $size");
 header("Content-type: $type");
 header("Content-Disposition: attachment; filename=$name");
 echo $content; 
-//exit;
-mysqli_close();
+include 'db_close.php';
 }
 
 ?>

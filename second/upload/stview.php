@@ -10,16 +10,8 @@
 <body>
 <h1>STUDY MATERIAL</h1>
 <?php
-	$username="root";   
-    $password="asdf";
-    $server = "localhost";
-    $dbname= "praneeth";
-    $connect = new MySQLi($server,$username,$password,$dbname);
-    $value = $_SESSION['in'];       
-    if($connect->connect_errno){
-        echo "Connection failed";
-    }
-
+	$value = $_SESSION['in'];       
+    include 'db_open.php';
 
 	$query = "SELECT id, name FROM `praneeth`.upload WHERE companyid='$value'";
 	$result = $connect->query($query);
@@ -42,7 +34,7 @@
 			}
 			
 		}
-	mysqli_close();
+    include 'db_close.php';
 ?>
 	<a href="../st.php"><button class="button button1">Go Back</button> </a>
 </body>

@@ -4,15 +4,7 @@ require 'df.php';
 require 'vendor/autoload.php';
 use Mailgun\Mailgun;
 if($_SERVER['REQUEST_METHOD'] == "POST"){
-	$username="root";	
-	$password="asdf";
-	$server = "localhost";
-	$dbname= "praneeth";
-	$connect = new MySQLi($server,$username,$password,$dbname);
-			
-	if($connect->connect_errno){
-		echo "Connection failed";
-	}
+	include 'db_open.php';
 	$uname = $_POST['uname'];
 	$_SESSION["ui"] = $uname;
 	$rock = $_POST['ps'];
@@ -42,5 +34,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 				}
 			
 }
+include 'db_close.php';
 
 ?>

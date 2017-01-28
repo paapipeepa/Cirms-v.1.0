@@ -763,32 +763,7 @@ li[data-type="control_image"] img {
           <input type="text" class=" form-textbox validate[Url]" data-type="input-textbox" id="input_16" name="q16_companyUrl16" size="30" value="">
         </div>
       </li>
-      <!--
-      <li class="form-line" data-type="control_datetime" id="id_18">
-        <label class="form-label form-label-left form-label-auto" id="label_18" for="input_18"> Date of Interview </label>
-        <div id="cid_18" class="form-input jf-required">
-          <span class="form-sub-label-container" style="vertical-align: top">
-            <input class="form-textbox validate[limitDate]" id="month_18" name="q18_dateOf[month]" type="tel" size="2" maxlength="2" value="">
-            <span class="date-separate">
-              &nbsp;-
-            </span>
-            <label class="form-sub-label" for="month_18" id="sublabel_month" style="min-height: 13px;"> Month </label>
-          </span>
-          <span class="form-sub-label-container" style="vertical-align: top">
-            <input class="form-textbox validate[limitDate]" id="day_18" name="q18_dateOf[day]" type="tel" size="2" maxlength="2" value="">
-            
-          </span>
-          <span class="form-sub-label-container" style="vertical-align: top">
-            <input class="form-textbox validate[limitDate]" id="year_18" name="q18_dateOf[year]" type="tel" size="4" maxlength="4" value="">
-            <label class="form-sub-label" for="year_18" id="sublabel_year" style="min-height: 13px;"> Year </label>
-          </span>
-          <span class="form-sub-label-container" style="vertical-align: top">
-            <img class="showAutoCalendar" alt="Pick a Date" id="input_18_pick" src="./File Upload Form_files/calendar.png" align="absmiddle">
-            <label class="form-sub-label" for="input_18_pick" style="min-height: 13px;">  </label>
-          </span>
-        </div>
-      </li>
- -->
+     
      <li class="form-line" data-type="control_textbox" id="id_20">
         <label class="form-label form-label-left form-label-auto" id="label_20" for="input_20"> Date </label>
         <div id="cid_20" class="form-input jf-required">
@@ -864,22 +839,7 @@ li[data-type="control_image"] img {
           <textarea id="input_7" class="form-textarea" name="q7_additionalDetails" cols="32" rows="6"></textarea>
         </div>
       </li>
-      <!--
-      <li class="form-line jf-required" data-type="control_fileupload" id="id_8">
-        <label class="form-label form-label-left" id="label_8" for="input_8">
-          Click to upload Image
-          <span class"=form-required">
-            *
-          </span>
-        </label>
-        <div id="cid_8" class="form-input jf-required validate[required]"><div class="qq-uploader"><div class="qq-upload-drop-area" style="display: none;"><span>Drop files here to upload</span></div><div class="qq-upload-button {buttonStyle}" style="position: relative; overflow: hidden; direction: ltr;">
-              Upload a File
-            </div>
-            <div class="inputContainer" style="overflow: hidden; position: absolute; top: 0px; right: 0px; width: 224px; height: 45px;">
-            <input  type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;">
-            </div>
-            <div class="form-sub-label"> Max Total Upload Size: 500MB </div><ul class="qq-upload-list"></ul></div></div>
-      -->
+     
          <input type="file" name="file"/> 
       
       <li class="form-line" data-type="control_button" id="id_9">

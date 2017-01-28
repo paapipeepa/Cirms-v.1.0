@@ -8,19 +8,9 @@
 <body>
 	<?php
 		if($_SERVER['REQUEST_METHOD'] == "POST"){
-			$username="root";	
-			$password="asdf";
-			$server = "localhost";
-			$dbname= "praneeth";
+			include 'db_open.php';
 			$uname="cirms_admin";
 			$upass="@mm@123";
-			$connect = new MySQLi($server,$username,$password,$dbname);
-			
-			if($connect->connect_errno){
-				echo "Connection failed";
-				echo "<br>";
-			}
-			
 			if(isset($_SESSION['uname'])){
 			  if($_SESSION['uname'] == 'cirms_admin'){
 			  header('Refresh:0;url=./second/login.php');
@@ -30,8 +20,10 @@
 			  } 
 			}
 			else{
+			include 'use.php';
 			$mail=$_POST['uname'];
-			$pwd=$_POST['psw'];		
+			$pwd=$_POST['psw'];
+			$pwd = md5($salt.$pwd);		
 			if($mail == $uname){					
 				$sqlQuery = "SELECT * FROM `praneeth`.login WHERE user='$uname' AND pass= '$upass';";
 				$sql = $connect->query($sqlQuery);
@@ -60,8 +52,9 @@
 				}
 				
 			}
-			}
 		}
+	}
+	include 'db_close.php';
 	?>
 </body>
 </html>

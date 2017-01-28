@@ -257,10 +257,7 @@
         <!--<div class="item brand photo">
           <div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp"> -->
             <?php
-              $username="root"; 
-              $password="asdf";
-              $server = "localhost";
-              $dbname= "praneeth";
+              include 'db_open.php';
               $con = new mysqli($server,$username,$password,$dbname);
               if ($con->connect_error) {
                   die("Connection failed: " . $con->connect_error);
@@ -270,7 +267,7 @@
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="item brand photo">';
                   echo '<div data-ix="hover-portfolio-content" class="portfolio-overlay wow fadeInUp">';
-                    echo '<img width="500" src="display.php?id='.$row["id"].'">';
+                    echo '<img alt ='.$row["name"].'width="500" src="display.php?id='.$row["id"].'">';
                     echo '<a href="details.php?id='.$row["id"].'" data-ix="hide-portfolio-content-on-load" class="w-inline-block portfolio-content animsition-link">';
                     
 
@@ -283,6 +280,7 @@
                       echo '</div>';
                       echo '</div>';
             }
+            include 'db_close.php';
           ?>  
           
           </div>

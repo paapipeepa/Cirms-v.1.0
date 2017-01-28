@@ -5,16 +5,9 @@
 	</head>
 	<body>
 	<?php
-		$username = "root";
-		$password="asdf";
-        $server = "localhost";
-        $dbname= "praneeth";
-      	$id = $_GET['id'];
-        $connect=new MYSQLi($sever,$username,$password,$database);
-        if ($connect->connect_error) {
-    			die("Connection failed: " . $connect->connect_error);
-			} 
-		$sql = "SELECT 	Name, Rno FROM `praneeth`.Company_Registration WHERE id = '$id'";
+		$id = $_GET['id'];
+        include 'db_open.php';
+        $sql = "SELECT * FROM `praneeth`.Company_Registration WHERE id = '$id'";
 		$result = $connect->query($sql);
 		$rows = $result->num_rows;
 		if ( $rows > 0) {
@@ -22,10 +15,9 @@
         		while($row = $result->fetch_assoc()) {
 
         		echo '<tr>';
-        		 echo '<td>'.$row["Name"].'</td>'.'<td>'.$row["Rno"].'</td>';
+        		 echo '<td>'.$row["Rno"].'</td>';
         		 echo '</tr>';
-        		//echo "Name: " . $row["Name"]. " - Roll No: " . $row["Rno"].";
-        		
+        	
     		}
     			echo "</table>";
 		} 
@@ -34,7 +26,7 @@
     		
 		}
 		$connect->close();
-		
+		include 'db_close.php';
 	?>
 			<a href="<?php echo "details.php?id='$id'"; ?>"> <button class="button button4">Go Back</button> </a>
 
